@@ -1,7 +1,7 @@
 import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem";
-import { ShoppingCart, ChevronLeft, Zap } from "lucide-react";
+import { ChevronLeft, Zap } from "lucide-react";
 const Cart = () => {
   const { cart, cartTotalPrice, cartCount, addToCart } = useCart();
   return (
@@ -50,10 +50,13 @@ const Cart = () => {
                 Rs.{cartTotalPrice.toFixed(2)}
               </h2>
             </div>
-            <button className="mb-4  w-full max-auto text-white text-md font-bold uppercase bg-orange-600 rounded-full  py-3 shadow-orange-800/50 cursor-pointer hover:bg-orange-700 transition duration-300 flex items-center justify-center space-x-2 transform hover:ring-4 hover:ring-pink-600/50 tracking-wide">
-              <Zap className="w-5 h-5 " />
+            <Link
+              to="/checkout"
+              className="mb-4 mt-8 w-full max-auto text-white text-xl font-extrabold uppercase bg-orange-600 rounded-full  py-3 shadow-orange-800/50 cursor-pointer hover:bg-orange-700 transition duration-300 flex items-center justify-center space-x-2 transform hover:ring-4 hover:ring-pink-600/50 tracking-wider"
+            >
+              <Zap className="w-6 h-6 " />
               <span>proceed securely</span>
-            </button>
+            </Link>
             <p className="text-gray-500 text-sm text-center">
               All transactions are encrypted and secure
             </p>

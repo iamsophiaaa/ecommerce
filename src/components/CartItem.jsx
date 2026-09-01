@@ -1,7 +1,7 @@
 import { useCart } from "../context/CartContext";
 import { X } from "lucide-react";
 const CartItem = ({ item }) => {
-  const { cart, addToCart, removeFromCart, clearCart } = useCart();
+  const { addToCart, removeFromCart } = useCart();
   const increaseQuantity = () => addToCart(item);
   const decreaseQuantity = () => removeFromCart(item.id);
 
