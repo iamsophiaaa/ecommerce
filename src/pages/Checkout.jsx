@@ -24,6 +24,7 @@ const Checkout = () => {
   if (isConfirmed) {
     return <OrderConfirmation deliveryDetails={deliveryDetails} />;
   }
+  // console.log(deliveryDetails);
   return (
     <>
       <div className="container mx-auto px-4 md:px-8 pt-8">

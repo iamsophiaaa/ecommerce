@@ -1,5 +1,5 @@
 import { Search } from "lucide-react";
-const SearchFilter = () => {
+const SearchFilter = ({ searchTerm, setSearchTerm }) => {
   return (
     <>
       <div className="mb-5 p-5 bg-gray-900 rounded-2xl shadow-2xl border border-y-gray-800">
@@ -8,7 +8,10 @@ const SearchFilter = () => {
           <input
             type="text"
             placeholder="Search high-performance electronics by name or feature.."
-            className="w-full p-4 outline-none text-white bg-gray-800 placeholder-gray-500 text-base font-medium"
+            className="w-full p-4 outline-none text-white bg-gray-800 placeholder-gray-500 text-base font-medium "
+            aria-label="Search Products"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
       </div>
